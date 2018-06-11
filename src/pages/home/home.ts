@@ -58,6 +58,9 @@ export class HomePage {
 
   }
 
-
+  goToLastMonth(){
+    this.date = new Date(this.date.getFullYear(), this.date.getMonth(), 0);
+    this.getDaysOfMonth();
+  }
 
 }
