@@ -20,4 +20,17 @@ export class HomePage {
 
   }
 
+  getDaysOfMonth(){
+    this.daysInThisMonth = new Array();
+    this.daysInLastMonth = new Array();
+    this.daysInNextMonth = new Array();
+    this.currentMonth = this.monthNames[this.date.getMonth()];
+    this.currentYear = this.date.getFullYear();
+    if(this.date.getMonth() === new Date().getMonth()) {
+      this.currentDate = new Date().getDate();
+    } else {
+      this.currentDate = 999;
+    }
+  }
+
 }
