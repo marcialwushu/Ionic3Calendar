@@ -38,6 +38,26 @@ export class HomePage {
       this.daysInLastMonth.push(i);
     }
 
+    var thisNumOfDays = new Date(this.date.getFullYear(), this.date.getMonth()+1, 0).getDate();
+    for (var i = 0; i < thisNumOfDays; i++) {
+      this.daysInThisMonth.push(i+1);
+    }
+
+    var lastDayThisMonth = new Date(this.date.getFullYear(), this.date.getMonth()+1, 0).getDay();
+    var nextNumOfDays = new Date(this.date.getFullYear(), this.date.getMonth()+2, 0).getDate();
+    for (var i = 0; i < (6-lastDayThisMonth); i++){
+      this.daysInNextMonth.push(i+1);
+    }
+    var totalDays = this.daysInLastMonth.lenght+this.daysInThisMonth.lenght+this.daysInNextMonth.lenght;
+
+    if(totalDays<36) {
+      for(var i = (7-lastDayThisMonth); i < ((7-lastDayThisMonth)+7); i++){
+        this.daysInNextMonth.push(i);
+      }
+    }
+
   }
+
+
 
 }
