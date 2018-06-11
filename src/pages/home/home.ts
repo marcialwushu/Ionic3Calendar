@@ -7,6 +7,15 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  date: any;
+  daysInThisMonth: any;
+  daysInLastMonth: any;
+  daysInNextMonth: any;
+  monthNames: string[];
+  currentMonth: any;
+  currentYear: any;
+  currentDate: any;
+
   constructor(public navCtrl: NavController) {
 
   }
