@@ -31,6 +31,13 @@ export class HomePage {
     } else {
       this.currentDate = 999;
     }
+
+    var firstDayThisMonth = new Date(this.date.getFullYear(), this.date.getMonth(), 1).getDay();
+    var prevNumOfDays = new Date(this.date.getFullYear(), this.date.getMonth(), 0).getDay();
+    for(var i = prevNumOfDays -(firstDayThisMonth-1); i <= prevNumOfDays; i++) {
+      this.daysInLastMonth.push(i);
+    }
+
   }
 
 }
