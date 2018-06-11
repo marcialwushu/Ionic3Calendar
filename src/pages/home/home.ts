@@ -63,4 +63,9 @@ export class HomePage {
     this.getDaysOfMonth();
   }
 
+  goToNextMonth() {
+    this.date = new Date(this.date.getFullYear(), this.date.getMonth()+2, 0);
+    this.getDaysOfMonth();
+  }
+
 }
