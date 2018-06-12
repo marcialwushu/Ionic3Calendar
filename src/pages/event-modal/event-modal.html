@@ -15,6 +15,10 @@
     </ion-item>
 
     <ion-item>
+      <ion-input type="text" placeholder="Description" [(ngModel)]="event.message"></ion-input>
+    </ion-item>
+
+    <ion-item>
       <ion-label>Start</ion-label>
       <ion-datetime displayFormat="MM/DD/YYYY HH:mm" picketFormat="MM/DD/YYYY HH:mm" [(ngModel)]="event.startTime" [min]="minDate"></ion-datetime>
     </ion-item>

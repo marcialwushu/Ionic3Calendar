@@ -10,6 +10,7 @@ export class HomePage {
 
   eventSource = [];
   viewTitle: string;
+  viewContent: string;
   selectedDay = new Date();
 
   calendar = {
@@ -56,6 +57,7 @@ export class HomePage {
 
     let alert = this.alertCtrl.create({
       title: '' + event.title,
+      message: ''+ event.message,
       subTitle: 'From: ' + start + '<br>To: ' + end,
       buttons: ['OK']
     });
