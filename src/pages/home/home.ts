@@ -17,7 +17,7 @@ export class HomePage {
   currentDate: any;
 
   constructor(public navCtrl: NavController) {
-
+    this.getDaysOfMonth();
   }
 
   getDaysOfMonth(){
