@@ -14,4 +14,8 @@ export class AuthServiceProvider {
     this.user = angularFireAuth.authState;
   }
 
+  createUser(user: User){
+    return this.angularFireAuth.auth.createUserAndRetrieveDataWithEmailAndPassword(user.email, user.password);
+  }
+
 }
