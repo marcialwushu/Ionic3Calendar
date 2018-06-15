@@ -1,3 +1,4 @@
+import { ResetpasswordPage } from './../pages/resetpassword/resetpassword';
 import { LoginPage } from './../pages/login/login';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,10 +10,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { NgCalendarModule } from 'ionic2-calendar';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+import { SignupPage } from '../pages/signup/signup';
 
 
 const firebaseConfig = {
@@ -22,13 +25,15 @@ const firebaseConfig = {
     projectId: "demofirebase-1c239",
     storageBucket: "demofirebase-1c239.appspot.com",
     messagingSenderId: "1097819452311"
-}
+};
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    SignupPage,
+    ResetpasswordPage
   ],
   imports: [
     NgCalendarModule,
@@ -36,12 +41,15 @@ const firebaseConfig = {
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    SignupPage,
+    ResetpasswordPage
   ],
   providers: [
     StatusBar,
